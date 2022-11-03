@@ -1,4 +1,4 @@
-package com.ysh.ophs.controller;
+package com.yash.ophs.controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ysh.ophs.model.Hospital;
-import com.ysh.ophs.service.HospitalService;
+import com.yash.ophs.model.Hospital;
+import com.yash.ophs.service.HospitalService;
 
 @RestController
 public class HospitalController {

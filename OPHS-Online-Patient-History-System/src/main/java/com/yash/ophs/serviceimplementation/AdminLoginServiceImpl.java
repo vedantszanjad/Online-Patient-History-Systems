@@ -1,4 +1,4 @@
-package com.ysh.ophs.service_impl;
+package com.yash.ophs.serviceimplementation;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,9 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ysh.ophs.model.AdminLogin;
-import com.ysh.ophs.repository.AdminLoginDao;
-import com.ysh.ophs.service.AdminLoginService;
+import com.yash.ophs.dao.AdminLoginDao;
+import com.yash.ophs.model.AdminLogin;
+import com.yash.ophs.service.AdminLoginService;
 
 @Service
 public class AdminLoginServiceImpl implements AdminLoginService {

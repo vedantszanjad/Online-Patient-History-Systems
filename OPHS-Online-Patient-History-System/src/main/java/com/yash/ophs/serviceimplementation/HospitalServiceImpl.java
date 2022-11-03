@@ -1,12 +1,14 @@
-package com.ysh.ophs.service_impl;
+package com.yash.ophs.serviceimplementation;
 
 import java.util.List;
 import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.ysh.ophs.model.Hospital;
-import com.ysh.ophs.repository.HospitalDao;
-import com.ysh.ophs.service.HospitalService;
+
+import com.yash.ophs.dao.HospitalDao;
+import com.yash.ophs.model.Hospital;
+import com.yash.ophs.service.HospitalService;
 
 @Service
 public class HospitalServiceImpl implements HospitalService {

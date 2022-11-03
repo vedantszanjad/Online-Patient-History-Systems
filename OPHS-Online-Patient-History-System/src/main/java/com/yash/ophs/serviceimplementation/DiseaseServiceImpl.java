@@ -1,4 +1,4 @@
-package com.ysh.ophs.service_impl;
+package com.yash.ophs.serviceimplementation;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,9 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ysh.ophs.model.Disease;
-import com.ysh.ophs.repository.DiseaseDao;
-import com.ysh.ophs.service.DiseaseService;
+import com.yash.ophs.dao.DiseaseDao;
+import com.yash.ophs.model.Disease;
+import com.yash.ophs.service.DiseaseService;
 
 @Service
 public class DiseaseServiceImpl implements DiseaseService {

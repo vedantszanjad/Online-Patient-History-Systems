@@ -1,8 +1,7 @@
-package com.ysh.ophs.service;
-
+package com.yash.ophs.service;
 import java.util.List;
 
-import com.ysh.ophs.model.Hospital;
+import com.yash.ophs.model.Hospital;
 
 
 public interface HospitalService {

@@ -1,8 +1,8 @@
-package com.ysh.ophs.service;
+package com.yash.ophs.service;
 
 import java.util.List;
 
-import com.ysh.ophs.model.PatientRegistration;
+import com.yash.ophs.model.PatientRegistration;
 
 public interface PateintService {
 
