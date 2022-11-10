@@ -16,4 +16,6 @@ public interface DoctorService {
 
 	public void deleteDoctor(int doctorId);
 
+	public Optional<Doctor>  findDoctorById(int doctorId);
+
 }

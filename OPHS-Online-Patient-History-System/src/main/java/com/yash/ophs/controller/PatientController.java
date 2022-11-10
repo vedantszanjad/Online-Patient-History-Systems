@@ -1,66 +1,74 @@
 package com.yash.ophs.controller;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.yash.ophs.model.PatientRegistration;
 import com.yash.ophs.service.PateintService;
 
 @RestController
+@RequestMapping("/patient")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PatientController {
 
 	@Autowired
-	PateintService pateintService;
+	private PateintService pateintService;
 
-	/**
-	 * creating post mapping that post the patient detail in the database
-	 * 
-	 * @param pr
-	 * @return int
-	 */
-	@PostMapping("/addPatient")
-	public int addPatient(@RequestBody PatientRegistration pr) {
-		pateintService.saveOrUpdate(pr);
-		return pr.getPatientId();
-	}
+	
+	@PostMapping(value = "/addPatient")
+    public PatientRegistration registerUser(@RequestBody PatientRegistration register) throws Exception {
+        String emailId = register.getEmailId();
+        if (emailId != null && !"".equals(emailId)) {
+            PatientRegistration userObj = pateintService.fetchUserByEmailId(emailId);
+            if (userObj != null) {
+                throw new Exception("User " + emailId + " is already exist");
+            }
+        }
+        return pateintService.saveOrUpdate(register);
 
-	/**
-	 * creating get mapping that get the details from the database
-	 * 
-	 * @return List of PatientRegistration
-	 */
+   }
+
+   @PostMapping(value = "/loginUser")
+    public PatientRegistration loginUser(@RequestBody PatientRegistration user) throws Exception {
+        String tempEmailId = user.getEmailId();
+        String tempPassword = user.getPassword();
+
+       PatientRegistration userObj = null;
+
+       if (tempEmailId != null && tempPassword != null) {
+            userObj = pateintService.fetchUserByEmailIdAndPassword(tempEmailId, tempPassword);
+        }
+        if (userObj == null) {
+            throw new Exception("Bad Credentials");
+        }
+        return userObj;
+    }
+
+	
+
+	
 	@GetMapping("/getAllPatientDetails")
 	public List<PatientRegistration> getAllPatientDetails() {
 		return pateintService.getAllpatient();
 	}
 
-	/**
-	 * creating delete mapping that delete the patient details from the database
-	 * 
-	 * @param patientId
-	 * @return void
-	 */
-	@DeleteMapping("/patient/{patientId}")
+	
+	@DeleteMapping("/deletePatient/{patientId}")
 	public void deletePatient(@PathVariable("patientId") int patientId) {
 		pateintService.delete(patientId);
 	}
 
-	/**
-	 * creating update mapping that update the patient details from the database
-	 * 
-	 * @param pr
-	 * @return
-	 */
+	
 	@PutMapping("/updatePatient/{patientId}")
-	public void updatePatient(@PathVariable("patientId") int patientId,@RequestBody PatientRegistration pr) {
-		pateintService.updatePatient(patientId,pr);
+	public void updatePatient(@PathVariable("patientId") int patientId, @RequestBody PatientRegistration pr) {
+		pateintService.updatePatient(patientId, pr);
 	}
 }

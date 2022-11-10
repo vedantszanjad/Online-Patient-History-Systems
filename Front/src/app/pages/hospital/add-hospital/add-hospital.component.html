@@ -1,0 +1,51 @@
+ <div class = "bootstrap-wrapper">
+    <div class ="container">
+        <div class ="row">
+            <div class = "col-md-6 offset-md-3" class="container text-center">
+            <div>
+              <img src = "../../../assets/Login Logo.jfif" alt="loading..." width="100" height="100"/>
+            </div>
+                <h1 class = "text-center">Hospital</h1>
+                 <mat-card>
+                <form (ngSubmit)="formSubmit() ">
+                   <mat-form-field  class = "full-width"appearance="outline">
+                    <mat-label>HospitalName</mat-label>
+                    <input required 
+                    [(ngModel)] = "hospital.hospitalName" name="HospitalName"
+                    matInput placeholder="HospitalName*">
+                    <mat-hint>Hospital Name Should Be Unique</mat-hint>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field  class = "full-width"appearance="outline">
+                        <mat-label>hospitalAddress</mat-label>
+                        <input required 
+                        [(ngModel)] = "hospital.hospitalAddress" name="hospitalAddress"
+                        matInput placeholder="hospitalAddress*">
+                        <mat-hint>Address Name Should Be Unique</mat-hint>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field  class = "full-width"appearance="outline">
+                        <mat-label>hospitalCreatedDate</mat-label>
+                        <input required 
+                        [(ngModel)] = "hospital.hospitalCreatedDate" name="hospitalCreatedDate"
+                        matInput placeholder="hospitalCreatedDate*">
+                        <mat-hint>Hospital  created Should Be Unique</mat-hint>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field  class = "full-width"appearance="outline">
+                        <mat-label>HospitalCharges</mat-label>
+                        <input required 
+                        [(ngModel)] = "hospital.hospitalCharges" name="hospitalCharges"
+                        matInput placeholder="hospitalCharges*">
+                        <mat-hint>Hospital date should be unique</mat-hint>
+                    </mat-form-field>
+                      <div class = "container text-center">
+                          <button type = "submit" mat-raised-button color="warn">Add</button>
+                            <input  type="reset" value="Reset">
+                        </div>
+                          <!-- <button style = "margin-left:20px;"mat-raised-button color="primary">Clear</button>  -->
+                </form>
+              </mat-card>
+        </div>
+    </div>
+</div> 

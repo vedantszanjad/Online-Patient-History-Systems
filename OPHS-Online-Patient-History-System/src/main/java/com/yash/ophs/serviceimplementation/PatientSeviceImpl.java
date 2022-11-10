@@ -20,11 +20,11 @@ public class PatientSeviceImpl implements PateintService {
 	 * @param PatientRegistration
 	 * @return void
 	 */
-	@Override
-	public void saveOrUpdate(PatientRegistration pr) {
-		patientDao.save(pr);
-
-	}
+//	@Override
+//	public PatientRegistration saveOrUpdate(PatientRegistration pr) {
+//		return patientDao.save(pr);
+//
+//	}
 
 	@Override
 	public List<PatientRegistration> getAllpatient() {
@@ -64,6 +64,24 @@ public class PatientSeviceImpl implements PateintService {
 		} else {
 			System.out.println("product not found");
 		}       
+		
 
 	}
-}
+	@Override
+	public PatientRegistration fetchUserByEmailId(String emailId) {
+		// TODO Auto-generated method stub
+		return patientDao.findByEmailId(emailId);
+	}
+
+	 @Override
+	    public PatientRegistration saveOrUpdate(PatientRegistration register) {
+	        // TODO Auto-generated method stub
+	        return patientDao.save(register);
+	    }
+	 
+	 @Override
+	    public PatientRegistration fetchUserByEmailIdAndPassword(String emailId, String password) {
+	        
+	        return patientDao.findByEmailIdAndPassword(emailId,password);
+	    }
+	}

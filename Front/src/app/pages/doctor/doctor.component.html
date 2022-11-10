@@ -1,0 +1,51 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width: 10%"> Doctor Id </th>
+            <th style="width: 20%"> Doctor Name </th>
+            <th style="width: 30%"> Mobile No </th>
+            <th style="width: 20%"> Age </th>
+            <th style="width: 20%"> Gender</th>
+            <th style="width: 20%"> Qualification </th>
+            <th style="width: 20%"> Experties</th>
+            <th style="width: 30%"><Blockquote></Blockquote></th>
+            <th style="width: 30%"><blockquote></blockquote></th>
+            <th><button [routerLink]="'/addDoctor'" routerLinkActive="active" type = "submit" mat-raised-button color="warn">Add</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let doctor of doctors">
+            <td>{{doctor.doctorId}}</td>
+            <td>{{doctor.doctorName}}</td>
+            <td>{{doctor.doctorMobileNumber}}</td>
+            <td>{{doctor.doctorAge}}</td>
+            <td>{{doctor.doctorGender}}</td>
+            <td>{{doctor.doctorQualification}}</td>
+            <td>{{doctor.doctorSpecification}}</td>
+            <td></td>
+            <td><button  routerLink="/editDoctor/{{doctor.doctorId}}" routerLinkActive="Active" class="text-center" type = "button" mat-raised-button color="warn">Edit</button></td>
+            <td><button (click)="deleteDoctor(doctor.doctorId)" class="text-center" type = "submit" mat-raised-button color="warn">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+<div class = "text-center">
+</div>
+
+
+<!-- <td style="white-space: nowrap">
+    <a routerLink="/editDoctor" class="btn btn-sm btn-primary mr-1">Edit</a> &nbsp;
+    <a routerLink="/deleteDoctor" class="btn btn-sm btn-primary mr-1">Delete</a> &nbsp;
+    <a routerLink="/updateDoctor" class="btn btn-sm btn-primary mr-1">Update</a> &nbsp;
+</td>
+<tr *ngIf="">
+<td colspan="4" class="text-center">
+    <span class="spinner-border spinner-border-lg align-center"></span>
+</td>
+</tr> -->
+
+
+
+   <!-- <button class="btn btn-sm btn-danger btn-delete-user" [disabled]="">
+        <span *ngIf="" class="spinner-border spinner-border-sm">Add</span>
+        <span *ngIf="">Delete</span>
+    </button> -->

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,11 +13,14 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.yash.ophs.model.Doctor;
 import com.yash.ophs.model.RoomType;
 import com.yash.ophs.serviceimplementation.RoomTypeServiceImpl;
 
 @RestController
 @RequestMapping("/roomType")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class RoomTypeController {
 
 	@Autowired
@@ -42,13 +46,19 @@ public class RoomTypeController {
 
 	@PutMapping("/updateRoomType/{roomTypeId}")
 	public RoomType update(@RequestBody RoomType roomType, @PathVariable int roomTypeId) {
-		return this.roomServImpl.update(roomType,roomTypeId);
+		return this.roomServImpl.updateRoomType(roomType,roomTypeId);
 
 	}
 
 	@DeleteMapping("/deleteRoomType/{roomTypeId}")
 	public void deleteMedicine(@PathVariable String roomTypeId) {
 		roomServImpl.deleteRoomType(Integer.parseInt(roomTypeId));
+	}
+	
+	@GetMapping("/findRoomTypeById/{roomTypeId}")
+	public Optional<RoomType>  findRoomTypeId(@PathVariable("roomTypeId") int roomTypeId) {
+
+		return this.roomServImpl.findRoomTypeById(roomTypeId);
 	}
 	
 	

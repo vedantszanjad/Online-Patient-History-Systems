@@ -3,6 +3,7 @@ package com.yash.ophs.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.yash.ophs.model.Medicine;
 import com.yash.ophs.model.RoomType;
 
 public interface RoomTypeService {
@@ -12,7 +13,10 @@ public interface RoomTypeService {
 
 	public RoomType addRoomType(RoomType roomType);
 
-	public RoomType update(RoomType roomType, int roomTypeId);
+	public RoomType updateRoomType(RoomType roomType, int roomTypeId);
 
 	public void deleteRoomType(int roomTypeId);
+	
+	public Optional<RoomType> findRoomTypeById(int roomTypeId);
+	
 }

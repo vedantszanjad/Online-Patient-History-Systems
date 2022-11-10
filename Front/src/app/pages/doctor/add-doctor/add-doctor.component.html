@@ -1,0 +1,77 @@
+<div class = "bootstrap-wrapper">
+    <div class ="container">
+        <div class ="row">
+            <div class = "col-md-6 offset-md-3" class="container text-center">
+            <div>
+              <img src = "../../../assets/Login Logo.jfif" alt="loading..." width="100" height="100"/>
+            </div>
+                <h1 class = "text-center">Doctor</h1>
+                <!-- //{{patient | json}} -->
+                 <mat-card>
+                <form (ngSubmit)="formSubmit()">
+                   <!-- <mat-form-field  class = "full-width"appearance="outline">
+                    <mat-label>DoctorId</mat-label>
+                    <input required 
+                    [(ngModel)] = "doctor.doctorId" name="HospitalName"
+                    matInput placeholder="DoctorId*"> -->
+                    <!-- <mat-hint>Hospital Name Should Be Unique</mat-hint> -->
+                    <!-- </mat-form-field> -->
+                   
+                    <br>
+                    <mat-form-field  class = "full-width"appearance="outline">
+                        <mat-label>DoctorName</mat-label>
+                        <input required 
+                        [(ngModel)] = "doctor.doctorName" name="doctorName"
+                        matInput placeholder="DoctorName*">
+                        <!-- <mat-hint>Address Name Should Be Unique</mat-hint> -->
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field  class = "full-width"appearance="outline">
+                        <mat-label>doctorMobileNumber</mat-label>
+                        <input required 
+                        [(ngModel)] = "doctor.doctorMobileNumber" name="doctorMobileNumber"
+                        matInput placeholder="hospitalCreatedDate*">
+                        <!-- <mat-hint>Hospital  created Should Be Unique</mat-hint> -->
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field  class = "full-width"appearance="outline">
+                        <mat-label>doctorAge</mat-label>
+                        <input required 
+                        [(ngModel)] = "doctor.doctorAge" name="doctorAge"
+                        matInput placeholder="hospitalCharges*">
+                        <!-- <mat-hint>Hospital date should be unique</mat-hint> -->
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field  class = "full-width"appearance="outline">
+                        <mat-label>doctorGender</mat-label>
+                        <input required 
+                        [(ngModel)] = "doctor.doctorGender" name="doctorGender"
+                        matInput placeholder="hospitalCharges*">
+                        <!-- <mat-hint>Hospital date should be unique</mat-hint> -->
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field  class = "full-width"appearance="outline">
+                        <mat-label>doctorQualification</mat-label>
+                        <input required 
+                        [(ngModel)] = "doctor.doctorQualification" name="doctorQualification"
+                        matInput placeholder="hospitalCharges*">
+                        <!-- <mat-hint>Hospital date should be unique</mat-hint> -->
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field  class = "full-width"appearance="outline">
+                        <mat-label>doctorSpecification</mat-label>
+                        <input required 
+                        [(ngModel)] = "doctor.doctorSpecification" name="doctorSpecification"
+                        matInput placeholder="hospitalCharges*">
+                        <!-- <mat-hint>Hospital date should be unique</mat-hint> -->
+                    </mat-form-field>
+                      <div class = "container text-center">
+                          <button type = "submit" mat-raised-button color="warn">Add</button>
+                            <input  type="reset" value="Reset">
+                        </div>
+                         <!-- <button style = "margin-left:20px;"mat-raised-button color="primary">Clear</button> -->
+                </form>
+              </mat-card>
+        </div>
+    </div>
+</div> 

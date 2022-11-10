@@ -63,4 +63,10 @@ public class MedicineServiceImplementation implements MedicineService {
 		medicineDao.deleteById(tabletId);
 	}
 
+	@Override
+	public Optional<Medicine> findMedicineById(int tabletId) {
+		// TODO Auto-generated method stub
+		return medicineDao.findById(tabletId);
+	}
+
 }

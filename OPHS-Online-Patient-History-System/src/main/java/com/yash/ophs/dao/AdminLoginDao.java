@@ -8,4 +8,5 @@ import com.yash.ophs.model.AdminLogin;
 @Repository
 public interface AdminLoginDao extends JpaRepository<AdminLogin, Integer> {
 
+	public AdminLogin findByAdminName(String adminName);
 }

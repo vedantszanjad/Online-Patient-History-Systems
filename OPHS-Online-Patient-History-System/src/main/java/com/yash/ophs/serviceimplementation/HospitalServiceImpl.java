@@ -50,4 +50,10 @@ public class HospitalServiceImpl implements HospitalService {
 			System.out.println("Hospital id not found ...!!!");
 		}
 	}
+
+	@Override
+	public Optional<Hospital> findHospitalById(int hospitalId) {
+		// TODO Auto-generated method stub
+		return hospitalDao.findById(hospitalId);
+	}
 }

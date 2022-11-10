@@ -3,10 +3,12 @@ package com.yash.ophs.serviceimplementation;
 import java.util.List;
 import java.util.Optional;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yash.ophs.dao.AdminLoginDao;
+import com.yash.ophs.dao.RoleDao;
 import com.yash.ophs.model.AdminLogin;
 import com.yash.ophs.service.AdminLoginService;
 
@@ -14,6 +16,9 @@ import com.yash.ophs.service.AdminLoginService;
 public class AdminLoginServiceImpl implements AdminLoginService {
 	@Autowired
 	AdminLoginDao adminLoginDao;
+
+	@Autowired
+	private RoleDao roleDao;
 
 	@Override
 	public void saveOrUpdate(AdminLogin al) {

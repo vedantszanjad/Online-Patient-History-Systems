@@ -20,6 +20,7 @@ public class DoctorServiceImplementation implements DoctorService {
 	@Override
 	public List<Doctor> getAllDoctors() {
 		// TODO Auto-generated method stub
+		System.out.println(doctorDao.findAll().size());
 		return doctorDao.findAll();
 	}
 
@@ -65,6 +66,12 @@ public class DoctorServiceImplementation implements DoctorService {
 	public void deleteDoctor(int doctorId) {
 		// TODO Auto-generated method stub
 		doctorDao.deleteById(doctorId);
+	}
+
+	@Override
+	public Optional<Doctor> findDoctorById(int doctorId) {
+		
+		return doctorDao.findById(doctorId);
 	}
 	
 	

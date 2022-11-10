@@ -1,0 +1,29 @@
+<p>medicine works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width: 10%"> Tablet Id </th>
+            <th style="width: 20%"> Tablet Name </th>
+            <th style="width: 30%"> Tablet price</th>
+            <th style="width: 20%"> Tablet Quantity</th>
+            <th style="width: 20%"> Price</th>
+            <th style="width: 30%"><Blockquote></Blockquote></th>
+            <th style="width: 30%"><blockquote></blockquote></th>
+            <th><button [routerLink]="'/addMedicine'" routerLinkActive="active" type = "submit" mat-raised-button color="warn">Add</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let medicine of medicines">
+            <td>{{medicine.tabletId}}</td>
+            <td>{{medicine.tabletName}}</td>
+            <td>{{medicine.tabletPrice}}</td>
+            <td>{{medicine.tabletQuantity}}</td>
+            <td>{{medicine.price}}</td>
+            <td></td>
+            <td><button  routerLink="/editMedicine/{{medicine.tabletId}}" routerLinkActive="Active" class="text-center" type = "button" mat-raised-button color="warn">Edit</button></td>
+            <td><button (click)="delete(medicine.tabletId)" class="text-center" type = "submit" mat-raised-button color="warn">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+<div class = "text-center">
+</div>

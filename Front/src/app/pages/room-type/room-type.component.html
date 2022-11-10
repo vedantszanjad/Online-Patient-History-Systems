@@ -1,0 +1,24 @@
+<p>room-type works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width: 10%"> RoomType Id </th>
+            <th style="width: 20%"> RoomType Name </th>
+            <th style="width: 20%">Price </th>
+            <th style="width: 30%"><Blockquote></Blockquote></th>
+            <th style="width: 30%"><blockquote></blockquote></th>
+            <th><button [routerLink]="'/addRoomtypes'" routerLinkActive="active" type = "submit" mat-raised-button color="warn">Add</button></th>
+            </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let roomtypes of roomtypes">
+            <td>{{roomtypes.roomTypeId}}</td>
+            <td>{{roomtypes.roomTypeName}}</td>
+            <td>{{roomtypes.pricePerDay}}</td>
+            <td><button  routerLink="/editRoomtype/{{roomtypes.roomTypeId}}" routerLinkActive="Active" class="text-center" type = "button" mat-raised-button color="warn">Edit</button></td>
+            <td> <td><button (click)="delete(roomtypes.roomTypeId)" class="text-center" type = "submit" mat-raised-button color="warn">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+<div class = "text-center">
+</div>

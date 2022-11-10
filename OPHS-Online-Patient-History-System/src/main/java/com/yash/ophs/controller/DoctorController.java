@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,7 @@ import com.yash.ophs.service.DoctorService;
 
 @RestController
 @RequestMapping("/doctor")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class DoctorController {
 
 	@Autowired
@@ -29,6 +31,12 @@ public class DoctorController {
 	public List<Doctor> getAllDoctors() {
 
 		return this.drSerImpl.getAllDoctors();
+	}
+	
+	@GetMapping("/findDoctorById/{doctorId}")
+	public Optional<Doctor>  findDoctorById(@PathVariable("doctorId") int doctorId) {
+
+		return this.drSerImpl.findDoctorById(doctorId);
 	}
 
 	@GetMapping("/getOneDoctor/{doctorId}")
@@ -50,7 +58,8 @@ public class DoctorController {
 	}
 
 	@DeleteMapping("/deleteDoctor/{doctorId}")
-	public void deleteDoctor(@PathVariable String doctorId) {
-		drSerImpl.deleteDoctor(Integer.parseInt(doctorId));
+	public String deleteDoctor(@PathVariable("doctorId") int doctorId) {
+		drSerImpl.deleteDoctor(doctorId);
+		return "ok";
 	}
 }

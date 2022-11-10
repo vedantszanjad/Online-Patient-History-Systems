@@ -6,12 +6,17 @@ import com.yash.ophs.model.PatientRegistration;
 
 public interface PateintService {
 
-	public void saveOrUpdate(PatientRegistration pr);
+//	public PatientRegistration saveOrUpdate(PatientRegistration pr);
 
 	public List<PatientRegistration> getAllpatient();
 
 	public void delete(int patientId);
 
 	public void updatePatient(int patientId,PatientRegistration pr);
+	
+	public PatientRegistration fetchUserByEmailId(String emailId);
 
+	public PatientRegistration saveOrUpdate(PatientRegistration register);
+	   
+	public PatientRegistration fetchUserByEmailIdAndPassword(String tempEmailId, String tempPassword);
 }

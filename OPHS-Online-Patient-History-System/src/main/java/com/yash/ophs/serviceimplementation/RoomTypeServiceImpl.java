@@ -2,12 +2,9 @@ package com.yash.ophs.serviceimplementation;
 
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.yash.ophs.dao.RoomTypeDao;
-import com.yash.ophs.model.Medicine;
 import com.yash.ophs.model.RoomType;
 import com.yash.ophs.service.RoomTypeService;
 
@@ -37,7 +34,7 @@ public class RoomTypeServiceImpl implements RoomTypeService {
 	}
 
 	@Override
-	public RoomType update(RoomType roomType, int roomTypeId) {
+	public RoomType updateRoomType(RoomType roomType, int roomTypeId) {
 		// TODO Auto-generated method stub
 		Optional<RoomType> op= roomDao.findById(roomTypeId);
 		if(op.isPresent())
@@ -59,6 +56,11 @@ public class RoomTypeServiceImpl implements RoomTypeService {
 	public void deleteRoomType(int roomTypeId) {
 		// TODO Auto-generated method stub
 		roomDao.deleteById(roomTypeId);
+	}
+
+	@Override
+	public Optional<RoomType> findRoomTypeById(int roomTypeId) {
+		return roomDao.findById(roomTypeId);
 	}
 
 }

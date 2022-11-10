@@ -7,5 +7,7 @@ import com.yash.ophs.model.PatientRegistration;
 
 @Repository
 public interface PatientDao extends JpaRepository<PatientRegistration, Integer> {
-	
+
+	PatientRegistration findByEmailId(String emailId);
+	PatientRegistration findByEmailIdAndPassword(String emailId, String password);
 }

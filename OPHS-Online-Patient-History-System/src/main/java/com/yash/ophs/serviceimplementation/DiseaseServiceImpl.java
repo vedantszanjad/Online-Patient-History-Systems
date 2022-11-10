@@ -3,6 +3,7 @@ package com.yash.ophs.serviceimplementation;
 import java.util.List;
 import java.util.Optional;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,9 +16,19 @@ public class DiseaseServiceImpl implements DiseaseService {
 	@Autowired
 	DiseaseDao diseaseDao;
 
+	private static final Logger log = Logger.getLogger(DiseaseServiceImpl.class);
 	@Override
 	public void saveOrUpdate(Disease disease) {
-		diseaseDao.save(disease);
+		log.info("svaeOrupdate Function :: Started");
+		try {
+			
+			diseaseDao.save(disease);
+		}
+		
+		catch(Exception e)
+		{
+			log.error("Error In saveOrUpdate " + e.getStackTrace());
+		}
 
 	}
 
@@ -45,5 +56,11 @@ public class DiseaseServiceImpl implements DiseaseService {
 		} else {
 			System.out.println("Disease id not found ...!!!");
 		}
+	}
+
+	@Override
+	public Optional<Disease> findDiseaseById(int diseaseId) {
+		// TODO Auto-generated method stub
+		return diseaseDao.findById(diseaseId);
 	}
 }

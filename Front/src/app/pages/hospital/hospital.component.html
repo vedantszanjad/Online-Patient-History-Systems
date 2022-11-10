@@ -1,0 +1,84 @@
+ <!-- <div class = "bootstrap-wrapper">
+    <div class ="container">
+        <div class ="row">
+            <div class = "col-md-6 offset-md-3" class="container text-center">
+            <div>
+              <img src = "../../../assets/Login Logo.jfif" alt="loading..." width="100" height="100"/>
+            </div>
+                <h1 class = "text-center">Hospital</h1>
+                 //{{patient | json}} 
+                 <mat-card>
+                <form (ngSubmit)="formSubmit() ">
+                   <mat-form-field  class = "full-width"appearance="outline">
+                    <mat-label>HospitalName</mat-label>
+                    <input required 
+                    [(ngModel)] = "hospital.hospitalName" name="HospitalName"
+                    matInput placeholder="HospitalName*">
+                    <mat-hint>Hospital Name Should Be Unique</mat-hint>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field  class = "full-width"appearance="outline">
+                        <mat-label>hospitalAddress</mat-label>
+                        <input required 
+                        [(ngModel)] = "hospital.hospitalAddress" name="hospitalAddress"
+                        matInput placeholder="hospitalAddress*">
+                        <mat-hint>Address Name Should Be Unique</mat-hint>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field  class = "full-width"appearance="outline">
+                        <mat-label>hospitalCreatedDate</mat-label>
+                        <input required 
+                        [(ngModel)] = "hospital.hospitalCreatedDate" name="hospitalCreatedDate"
+                        matInput placeholder="hospitalCreatedDate*">
+                        <mat-hint>Hospital  created Should Be Unique</mat-hint>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field  class = "full-width"appearance="outline">
+                        <mat-label>HospitalCharges</mat-label>
+                        <input required 
+                        [(ngModel)] = "hospital.hospitalCharges" name="hospitalCharges"
+                        matInput placeholder="hospitalCharges*">
+                        <mat-hint>Hospital date should be unique</mat-hint>
+                    </mat-form-field>
+                      <div class = "container text-center">
+                          <button type = "submit" mat-raised-button color="warn">Add</button>
+                            <input  type="reset" value="Reset">
+                        </div>
+                          <button style = "margin-left:20px;"mat-raised-button color="primary">Clear</button> 
+                </form>
+              </mat-card>
+        </div>
+    </div>
+</div>  -->
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width: 10%"> Hospital Id </th>
+            <th style="width: 20%"> Hospital Name </th>
+            <th style="width: 30%">Hospital Address</th>
+            <th style="width: 20%">Hospital Created Date</th>
+            <th style="width: 20%"> Hospital Charges</th>
+            <th style="width: 30%"><Blockquote></Blockquote></th>
+            <th style="width: 30%"><blockquote></blockquote></th>
+            <th><button [routerLink]="'/addHospital'" routerLinkActive="active" type = "submit" mat-raised-button color="warn">Add</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let hospital of hospitals">
+            <td>{{hospital.hospitalId}}</td>
+            <td>{{hospital.hospitalName}}</td>
+            <td>{{hospital.hospitalAddress}}</td>
+            <td>{{hospital.hospitalCreatedDate}}</td>
+            <td>{{hospital.hospitalCharges}}</td>
+            <td></td>
+            <td><button  routerLink="/editHospital/{{hospital.hospitalId}}" routerLinkActive="Active" class="text-center" type = "button" mat-raised-button color="warn">Edit</button></td>
+            <td><button (click)="delete(hospital.hospitalId)" class="text-center" type = "submit" mat-raised-button color="warn">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+<div class = "text-center">
+</div>
