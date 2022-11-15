@@ -19,6 +19,7 @@ import { AllergyComponent } from './pages/allergy/allergy.component';
 import { AddAllergyComponent } from './pages/allergy/add-allergy/add-allergy.component';
 import { PatientRegistration } from './model/patient-registration';
 import { RegisterComponent } from './pages/register/register.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 const routes: Routes =
   [
@@ -115,6 +116,9 @@ const routes: Routes =
     },
     {
       path:'addPatient',component : RegisterComponent
+    },
+    {
+      path:'getAdmin',component:AdminComponent
     }
 
   ];

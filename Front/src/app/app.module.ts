@@ -34,6 +34,7 @@ import { RoomTypeComponent } from './pages/room-type/room-type.component';
 import { AddRoomTypeComponent } from './pages/room-type/add-room-type/add-room-type.component';
 import { AddAllergyComponent } from './pages/allergy/add-allergy/add-allergy.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { AdminComponent } from './pages/admin/admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +57,7 @@ import { RegisterComponent } from './pages/register/register.component';
     AddRoomTypeComponent,
     AddAllergyComponent,
     RegisterComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
