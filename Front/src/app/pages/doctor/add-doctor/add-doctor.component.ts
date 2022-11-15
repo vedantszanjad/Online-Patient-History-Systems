@@ -56,7 +56,7 @@ export class AddDoctorComponent implements OnInit {
   }
 
   formSubmit() {
-    if (this.doctor.doctorId === '0') {
+    if (this.doctor.doctorId === '') {
       this.DoctorService.addDoctor(this.doctor).subscribe
         (
           (data: any) => {

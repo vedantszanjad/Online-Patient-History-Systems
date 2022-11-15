@@ -11,7 +11,8 @@ import { DoctorService } from 'src/app/services/doctor.service';
 export class DiseaseComponent implements OnInit {
 
   diseases: Disease[];
-  constructor(private DiseaseTsService : DiseaseTsService) { }
+  constructor(private DiseaseTsService : DiseaseTsService,
+    private location: Location) { }
 
 
   ngOnInit(): void {
@@ -35,6 +36,9 @@ export class DiseaseComponent implements OnInit {
       console.log(this.diseases);
     }
   });
+
+// this.location.back();
+  
  }
 
 }

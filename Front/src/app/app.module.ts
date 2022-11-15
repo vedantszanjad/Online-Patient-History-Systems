@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SignupComponent } from './pages/signup/signup.component';
+import { SignupComponent } from './pages/patient/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -32,6 +32,8 @@ import { MedicineComponent } from './pages/medicine/medicine.component';
 import { AddMedicineComponent } from './pages/medicine/add-medicine/add-medicine.component';
 import { RoomTypeComponent } from './pages/room-type/room-type.component';
 import { AddRoomTypeComponent } from './pages/room-type/add-room-type/add-room-type.component';
+import { AddAllergyComponent } from './pages/allergy/add-allergy/add-allergy.component';
+import { RegisterComponent } from './pages/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +54,8 @@ import { AddRoomTypeComponent } from './pages/room-type/add-room-type/add-room-t
     AddMedicineComponent,
     RoomTypeComponent,
     AddRoomTypeComponent,
+    AddAllergyComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

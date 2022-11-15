@@ -1,0 +1,39 @@
+<p>add-allergy works!</p>
+<div class = "bootstrap-wrapper">
+    <div class ="container">
+        <div class ="row">
+            <div class = "col-md-6 offset-md-3" class="container text-center">
+            <div>
+              <img src = "../../../assets/Login Logo.jfif" alt="loading..." width="100" height="100"/>
+            </div>
+                <h1 class = "text-center">Doctor</h1>
+            
+                 <mat-card>
+                <form (ngSubmit)="formSubmit()">
+                    <br>
+                    <br>
+                    <mat-form-field  class = "full-width"appearance="outline">
+                        <mat-label>allergyName</mat-label>
+                        <input required 
+                        [(ngModel)] = "allergy.allergyName" name="allergyName"
+                        matInput placeholder="allergyName*">
+                  
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field  class = "full-width"appearance="outline">
+                        <mat-label>allergyType</mat-label>
+                        <input required 
+                        [(ngModel)] = "allergy.allergyType" name="allergyType"
+                        matInput placeholder="allergyType*">
+                  
+                    </mat-form-field>
+                    <br>
+                      <div class = "container text-center">
+                          <button type = "submit" mat-raised-button color="warn">Add</button>
+                            <input  type="reset" value="Reset">
+                        </div>   
+                </form>
+              </mat-card>
+        </div>
+    </div>
+</div>  

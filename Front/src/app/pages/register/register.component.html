@@ -1,0 +1,98 @@
+<p>register works!</p>
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="container text-center">
+                    <img src="../../../assets/Login Logo.jfif" alt="loading..." width="100" height="100" />
+
+                </div>
+                <h1 class="text-center">Registered Here</h1>
+                <!-- //{{patient | json}} -->
+                <mat-card>
+                    <form (ngSubmit)="formSubmit() ">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>EmailId</mat-label>
+                            <input required [(ngModel)]="registration.emailId" name="emailId" type="email" matInput
+                                placeholder="Email*">
+                            <mat-hint>EmailId must be unique</mat-hint>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input required [(ngModel)]="registration.password" name="password" type="password" matInput
+                                placeholder="Password*" />
+                            <mat-hint>Password must be unique</mat-hint>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input required [(ngModel)]="registration.patientFirstName" name="patientFirstName" matInput
+                                placeholder="First Name*">
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Last Name</mat-label>
+                            <input required [(ngModel)]="registration.patientLastName" name="patientLastName" matInput
+                                placeholder="Last Name*">
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Address</mat-label>
+                            <input required [(ngModel)]="registration.patientAddress" name="patientAddress" matInput
+                                placeholder="Address*">
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Date Of Birth</mat-label>
+                            <input required [(ngModel)]="registration.dob" name="dob" type="date" matInput
+                                placeholder="DOB*" />
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Mobile Number</mat-label>
+                            <input required [(ngModel)]="registration.mobileNumber" name="gender" matInput
+                                placeholder="Gender*">
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Gender</mat-label>
+                            <input required [(ngModel)]="registration.gender" name="gender" matInput
+                                placeholder="Mobile Number*">
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Blood Group</mat-label>
+                            <input required [(ngModel)]="registration.bloodGroup" name="bloodGroup" matInput
+                                placeholder="Blood Group*">
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Relative Name</mat-label>
+                            <input required [(ngModel)]="registration.relativeName" name="relativeName" matInput
+                                placeholder="Relative Name*">
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Relative Mobile Number</mat-label>
+                            <input required [(ngModel)]="registration.relativeMobileNumber" name="relativeMobileNumber"
+                                matInput placeholder="Relative Mobile Number*">
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Relation With Patient</mat-label>
+                            <input required [(ngModel)]="registration.relationWithPatient" name="relationWithPatient"
+                                matInput placeholder="Relation With Patient*">
+                        </mat-form-field>
+                        <br>
+                        <div class="container text-center">
+                            <button type="submit" mat-raised-button color="warn">Registered</button>
+                            <br><br>
+                            <input class="but"  type="reset" value="Reset">
+                        </div>
+                    </form>
+                </mat-card>
+                <br>
+            </div>
+        </div>
+    </div>

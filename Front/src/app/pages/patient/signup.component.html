@@ -1,0 +1,45 @@
+
+<p>patient registration works!</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th style="width: 10%"> patientId </th>
+      <th style="width: 20%"> emailId</th>
+      <th style="width: 20%"> password</th>
+      <th style="width: 20%"> patientFirstName </th>
+      <th style="width: 20%"> patientLastName </th>
+      <th style="width: 20%"> patientAddress </th>
+      <th style="width: 20%"> dob </th>
+      <th style="width: 20%"> gender </th>
+      <th style="width: 20%"> bloodGroup </th>
+      <th style="width: 20%"> mobileNumber </th>
+      <th style="width: 20%"> relativeName </th>
+      <th style="width: 20%"> relativeMobileNumber </th>
+      <th style="width: 20%"> relationWithPatient </th>
+      <!-- <th><button [routerLink]="'/addAllergy'" routerLinkActive="active" type="submit" mat-raised-button
+          color="warn">Add</button></th> -->
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let patients of patients">
+      <td>{{patients.patientId}}</td>
+      <td>{{patients.emailId}}</td>
+      <td>{{patients.password}}</td>
+      <td>{{patients.patientFirstName}}</td>
+      <td>{{patients.patientLastName}}</td>
+      <td>{{patients.patientAddress}}</td>
+      <td>{{patients.dob}}</td>
+      <td>{{patients.gender}}</td>
+      <td>{{patients.bloodGroup}}</td>
+      <td>{{patients.mobileNumber}}</td>
+      <td>{{patients.relativeName}}</td>
+      <td>{{patients.relativeMobileNumber}}</td>
+      <td>{{patients.relationWithPatient}}</td>
+
+      <!-- <td><button  routerLink="/editDisease/{{disease.diseaseId}}" routerLinkActive="Active" class="text-center" type = "button" mat-raised-button color="warn">Edit</button></td>  -->
+      <td><button (click)="delete(patients.patientId)" class="text-center" type="submit" mat-raised-button
+          color="warn">Delete</button></td>
+    </tr>
+  </tbody>
+</table>

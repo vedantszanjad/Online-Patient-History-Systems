@@ -1,27 +1,28 @@
 export class PatientRegistration {
+    patientId: number
+    
+    emailId: string
 
-    emailId:string
+    password: string;
 
-    password:string;
+    patientFirstName: string;
 
-     patientFirstName:string;
+    patientLastName: string;
 
-    patientLastName:string;
+    patientAddress: string;
 
-    patientAddress:string;
+    dob: string;
 
-    dob:string;
+    gender: string;
 
-    gender:string;
+    bloodGroup: string;
 
-    bloodGroup:string;
+    mobileNumber: number;
 
-    mobileNumber:number;
+    relativeName: string;
 
-    relativeName:string;
+    relativeMobileNumber: number;
 
-    relativeMobileNumber:number;
-
-    relationWithPatient:string;
+    relationWithPatient: string;
 }
 

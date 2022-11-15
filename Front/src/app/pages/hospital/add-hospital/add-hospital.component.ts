@@ -47,7 +47,7 @@ export class AddHospitalComponent implements OnInit {
 
 
   formSubmit() {
-    if (this.hospital.hospitalId === '0') {
+    if (this.hospital.hospitalId === '') {
       this.HospitalService.addHospiatl(this.hospital).subscribe
         (
           (data: any) => {

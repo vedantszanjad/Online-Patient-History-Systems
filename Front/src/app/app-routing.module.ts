@@ -2,7 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
-import { SignupComponent } from './pages/signup/signup.component';
+import { SignupComponent } from './pages/patient/signup.component';
 import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
 import { HospitalComponent } from './pages/hospital/hospital.component';
 import { DoctorComponent } from './pages/doctor/doctor.component';
@@ -14,92 +14,110 @@ import { MedicineComponent } from './pages/medicine/medicine.component';
 import { AddMedicineComponent } from './pages/medicine/add-medicine/add-medicine.component';
 import { RoomTypeComponent } from './pages/room-type/room-type.component';
 import { AddRoomTypeComponent } from './pages/room-type/add-room-type/add-room-type.component';
+import { Allergy } from './model/Allergy';
+import { AllergyComponent } from './pages/allergy/allergy.component';
+import { AddAllergyComponent } from './pages/allergy/add-allergy/add-allergy.component';
+import { PatientRegistration } from './model/patient-registration';
+import { RegisterComponent } from './pages/register/register.component';
 
-const routes: Routes = 
-[
-  {
-    path:'',
-    component:HomeComponent,
-    pathMatch:'full',
-  },
+const routes: Routes =
+  [
+    {
+      path: '',
+      component: HomeComponent,
+      pathMatch: 'full',
+    },
 
-  {
-    path :'signup',
-    component:SignupComponent,
-  },
-  {
-    path : "login",
-    component:LoginComponent,
-  },
+    // {
+    //   path: 'signup',
+    //   component: SignupComponent,
+    // },
+    {
+      path: "login",
+      component: LoginComponent,
+    },
 
-  {
-    path : 'admin',component:AdminDashboardComponent
-  },
-  {
-    path:'admin/hospital',component:HospitalComponent
-  },
-  {
-    path:'hospital',component:HospitalComponent
-  },
+    {
+      path: 'admin', component: AdminDashboardComponent
+    },
+    {
+      path: 'admin/hospital', component: HospitalComponent
+    },
+    {
+      path: 'hospital', component: HospitalComponent
+    },
 
-  {
-    path : 'doctor',component:DoctorComponent,
-    
-  },
-  {
-    path:'addDoctor',component:AddDoctorComponent
-  },
+    {
+      path: 'doctor', component: DoctorComponent,
 
-  {
-    path:'editDoctor/:id',component:AddDoctorComponent
-  },
+    },
+    {
+      path: 'addDoctor', component: AddDoctorComponent
+    },
 
-  {
-    path:'getHospitals',component:HospitalComponent
-  },
-  
-  {
-    path:'addHospital',component:AddHospitalComponent
-  },
+    {
+      path: 'editDoctor/:id', component: AddDoctorComponent
+    },
 
-  {
-    path:'editHospital/:id',component:AddHospitalComponent
-  },
+    {
+      path: 'getHospitals', component: HospitalComponent
+    },
 
-  {
-    path:'getDisease',component:DiseaseComponent
-  },
+    {
+      path: 'addHospital', component: AddHospitalComponent
+    },
 
-  {
-    path:'addDisease',component:AddDiseaseComponent
-  },
+    {
+      path: 'editHospital/:id', component: AddHospitalComponent
+    },
 
-  {
-    path:'editDisease/:id',component:AddDiseaseComponent
-  },
+    {
+      path: 'getDisease', component: DiseaseComponent
+    },
 
-  {
-    path:'getMedicines',component:MedicineComponent
-  },
-  
-  {
-    path:'addMedicine',component:AddMedicineComponent
-  },
+    {
+      path: 'addDisease', component: AddDiseaseComponent
+    },
 
-  {
-    path:'editMedicine/:id',component:AddMedicineComponent
-  },
+    {
+      path: 'editDisease/:id', component: AddDiseaseComponent
+    },
 
-  {
-    path:'getRoomtypes',component:RoomTypeComponent
-  },
-  {
-    path:'addRoomtypes',component:AddRoomTypeComponent
-  },
-  {
-    path:'editRoomtype/:id',component:AddRoomTypeComponent
-  }
-];
+    {
+      path: 'getMedicines', component: MedicineComponent
+    },
+
+    {
+      path: 'addMedicine', component: AddMedicineComponent
+    },
+
+    {
+      path: 'editMedicine/:id', component: AddMedicineComponent
+    },
+
+    {
+      path: 'getRoomtypes', component: RoomTypeComponent
+    },
+    {
+      path: 'addRoomtypes', component: AddRoomTypeComponent
+    },
+    {
+      path: 'editRoomtype/:id', component: AddRoomTypeComponent
+    },
+    {
+      path: 'getAllergy', component: AllergyComponent
+    },
+    {
+      path: 'addAllergy', component: AddAllergyComponent
+    },
+    {
+      path: 'getPatientList', component: SignupComponent
+    },
+    {
+      path:'addPatient',component : RegisterComponent
+    }
+
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
