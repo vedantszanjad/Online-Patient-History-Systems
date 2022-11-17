@@ -13,7 +13,7 @@
             <td>{{allergy.aId}}</td>
             <td>{{allergy.allergyName}}</td>
             <td>{{allergy.allergyType}}</td>
-            <!-- <td><button  routerLink="/editDisease/{{disease.diseaseId}}" routerLinkActive="Active" class="text-center" type = "button" mat-raised-button color="warn">Edit</button></td>  -->
+            <td><button  routerLink="/editAllergy/{{allergy.aId}}" routerLinkActive="Active" class="text-center" type = "button" mat-raised-button color="warn">Edit</button></td> 
             <td><button (click)="deleteAllergy(allergy.aId)" class="text-center" type = "submit" mat-raised-button color="warn">Delete</button></td>
         </tr>
     </tbody>

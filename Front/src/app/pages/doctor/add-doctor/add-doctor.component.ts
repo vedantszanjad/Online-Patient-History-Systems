@@ -73,7 +73,7 @@ export class AddDoctorComponent implements OnInit {
           }
         )
 
-        this.router.navigate(['../'],{relativeTo: this.route});
+        // this.router.navigate(['../'],{relativeTo: this.route});
     }
     else {
 
@@ -92,8 +92,7 @@ export class AddDoctorComponent implements OnInit {
               });
           }
         )
-
-     this.router.navigate(['../'],{relativeTo: this.route});
+    //  this.router.navigate(['../'],{relativeTo: this.route});
     }
 
   }

@@ -23,32 +23,19 @@ public class AdminLogin{
 	String adminName;
 	String userPassword;
 	String adminRole;
-	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,mappedBy="adminLogin")
-	private Set <AdminRole> admineRole = new HashSet<AdminRole>();
-
 	public AdminLogin() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public AdminLogin(int adminId, String adminName, String userPassword, String adminRole) {
+	public AdminLogin(int adminId, String adminName, String userPassword) {
 		super();
 		this.adminId = adminId;
 		this.adminName = adminName;
 		this.userPassword = userPassword;
-		this.adminRole = adminRole;
 	}
 
 	
-	
-	
-	public Set<AdminRole> getAdmineRole() {
-		return admineRole;
-	}
-
-	public void setAdmineRole(Set<AdminRole> admineRole) {
-		this.admineRole = admineRole;
-	}
 
 	public int getAdminId() {
 		return adminId;

@@ -25,4 +25,15 @@ export class AllergyService {
   {
     return this.http.delete<any>(`${baseUrl}/allergy/deleteAllergy/`+`${aId}`);
   }
+
+  public findAllergyById(aId:number):Observable<Allergy>
+  {
+     return this.http.get<Allergy>(`${baseUrl}/allergy/findAllergyById/` + `${aId}`);
+  } 
+
+  public updateAllergy(allergy:any):Observable<Allergy>
+  {
+    console.log('calling Diseases service',allergy)
+    return this.http.put<Allergy>(baseUrl+"/allergy/findAllergyById/"+`${allergy.aId}`,allergy);
+  } 
 }

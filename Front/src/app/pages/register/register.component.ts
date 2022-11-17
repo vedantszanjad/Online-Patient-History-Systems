@@ -32,7 +32,9 @@ export class RegisterComponent implements OnInit {
       mobileNumber: '',
       relativeName: '',
       relativeMobileNumber: '',
-      relationWithPatient: ''
+      relationWithPatient: '',
+      roleId: 2,
+
     }
   formSubmit() {
     this.ResgistrationService.registerUserData(this.registration).subscribe

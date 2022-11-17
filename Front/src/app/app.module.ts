@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,7 +33,21 @@ import { RoomTypeComponent } from './pages/room-type/room-type.component';
 import { AddRoomTypeComponent } from './pages/room-type/add-room-type/add-room-type.component';
 import { AddAllergyComponent } from './pages/allergy/add-allergy/add-allergy.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { AdminComponent } from './pages/admin/admin.component';
+import { PatientDiseasehistoryComponent } from './pages/patient-diseasehistory/patient-diseasehistory.component';
+import { PatientmedicnehitoryComponent } from './pages/patientmedicnehitory/patientmedicnehitory.component';
+import { PatienthospitalhistoryComponent } from './pages/patienthospitalhistory/patienthospitalhistory.component';
+import { PatientallergyhistoryComponent } from './pages/patientallergyhistory/patientallergyhistory.component';
+import { PatienthistoryComponent } from './pages/patienthistory/patienthistory.component';
+import { PatientDoctorComponent } from './pages/patient-doctor/patient-doctor.component';
+import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
+import { EditUserComponent } from './pages/user-dashboard/edit-user/edit-user.component';
+import { UserstatusComponent } from './pages/user-dashboard/userstatus/userstatus.component';
+import {MatListModule} from '@angular/material/list';
+import { SidenavComponent } from './pages/navbar/sidenav/sidenav.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +70,16 @@ import { AdminComponent } from './pages/admin/admin.component';
     AddRoomTypeComponent,
     AddAllergyComponent,
     RegisterComponent,
-    AdminComponent
+    PatientDiseasehistoryComponent,
+    PatientmedicnehitoryComponent,
+    PatienthospitalhistoryComponent,
+    PatientallergyhistoryComponent,
+    PatienthistoryComponent,
+    PatientDoctorComponent,
+    UserDashboardComponent,
+    EditUserComponent,
+    UserstatusComponent,
+    SidenavComponent, 
   ],
   imports: [
     BrowserModule,
@@ -67,11 +89,15 @@ import { AdminComponent } from './pages/admin/admin.component';
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
+
     HttpClientModule,
     MatSnackBarModule,
    MatCardModule,
    MatToolbarModule,
-   MatIconModule
+   MatIconModule,
+   MatListModule,
+   MatSidenavModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

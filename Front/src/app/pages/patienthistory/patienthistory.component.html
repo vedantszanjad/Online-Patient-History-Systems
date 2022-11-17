@@ -1,0 +1,51 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width: 10%"> patient history ID</th>
+             <!-- <th style="width: 10%"> emailId</th> -->
+            <th style="width: 10%"> patient first name</th>
+            <!-- <th style="width: 10%"> patient last name</th> -->
+            <th style="width: 20%"> Patient address</th>
+            <!-- <th style="width: 20%"> Date Of Birth</th> -->
+            <th style="width: 20%">Gender</th>
+            <!-- <th style="width: 20%">Blood Group</th> -->
+            <th style="width: 20%">Mobile Number</th>
+            <!-- <th style="width: 20%">Relative Name</th> -->
+            <!-- <th style="width: 20%">Relative number</th> -->
+            <!-- <th style="width: 30%">Relation with relative</th> -->
+            <th style="width: 30%">Patient Disease</th>
+            <th style="width: 30%">Patient Allergy</th>
+            <th style="width: 30%">Patient Hospital</th>
+            <th style="width: 30%">hospitalAddress</th>
+            <th style="width: 30%">Doctor Name</th>
+            <th style="width: 30%">Visit Date</th>
+            <th style="width: 30%">Next Visit Date</th>
+         </tr>
+     </thead>
+    <tbody>
+         <tr *ngFor="let patientHistory of patientHistory">
+            <td>{{patientHistory.patientHistoryId}}</td>
+            <!-- <td>{{patientHistory.patientAllergyHistory.patientRegistration.emailId}}</td> -->
+            <td>{{patientHistory.patientAllergyHistory.patientRegistration.patientFirstName}}</td>
+            <!-- <td>{{patientHistory.patientAllergyHistory.patientRegistration.patientLastName}}</td> -->
+            <td>{{patientHistory.patientAllergyHistory.patientRegistration.patientAddress}}</td>
+            <!-- <td>{{patientHistory.patientAllergyHistory.patientRegistration.dob}}</td> -->
+            <td>{{patientHistory.patientAllergyHistory.patientRegistration.gender}}</td>
+            <!-- <td>{{patientHistory.patientAllergyHistory.patientRegistration.bloodGroup}}</td> -->
+            <td>{{patientHistory.patientAllergyHistory.patientRegistration.mobileNumber}}</td>
+            <!-- <td>{{patientHistory.patientAllergyHistory.patientRegistration.relativeName}}</td>
+            <td>{{patientHistory.patientAllergyHistory.patientRegistration.relativeMobileNumber}}</td>
+            <td>{{patientHistory.patientAllergyHistory.patientRegistration.relationWithPatient}}</td> -->
+            <td>{{patientHistory.patientDiseaseHistory.disease.diseaseName}}</td>
+            <td>{{patientHistory.patientAllergyHistory.allergy.allergyName}}</td>
+            <td>{{patientHistory.patientHospitalHistory.hospital.hospitalName}}</td>
+            <td>{{patientHistory.patientHospitalHistory.hospital.hospitalAddress}}</td>
+            <td>{{patientHistory.patientDocVisit.doctor.doctorName}}</td>
+            <td>{{patientHistory.patientDocVisit.visitDate}}</td>
+            <td>{{patientHistory.patientDocVisit.nextVisitDate}}</td>
+        
+        </tr> 
+    </tbody>
+</table>
+<div class = "text-center">
+</div> 

@@ -1,14 +1,17 @@
 package com.yash.ophs.model;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class PatientRegistration {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	int patientId;
 	String emailId;
 	String password;
@@ -22,15 +25,23 @@ public class PatientRegistration {
 	String relativeName;
 	String relativeMobileNumber;
 	String relationWithPatient;
+	
+	@Column(name="role_id")
+	private int roleId;
 
 	public PatientRegistration() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	
+	
 	public PatientRegistration(int patientId, String emailId, String password, String patientFirstName,
 			String patientLastName, String patientAddress, String dob, String gender, String bloodGroup,
-			long mobileNumber, String relativeName, String relativeMobileNumber, String relationWithPatient) {
+			long mobileNumber, String relativeName, String relativeMobileNumber, String relationWithPatient) 
+	
+	{		
 		super();
 		this.patientId = patientId;
 		this.emailId = emailId;
@@ -45,6 +56,7 @@ public class PatientRegistration {
 		this.relativeName = relativeName;
 		this.relativeMobileNumber = relativeMobileNumber;
 		this.relationWithPatient = relationWithPatient;
+		
 	}
 
 	public int getPatientId() {
@@ -146,10 +158,29 @@ public class PatientRegistration {
 	public String getRelationWithPatient() {
 		return relationWithPatient;
 	}
+	
+	
 
 	public void setRelationWithPatient(String relationWithPatient) {
 		this.relationWithPatient = relationWithPatient;
 	}
+
+
+
+
+	public int getRoleId() {
+		return roleId;
+	}
+
+
+
+
+	public void setRoleId(int roleId) {
+		this.roleId = roleId;
+	}
+
+
+
 
 	@Override
 	public String toString() {
@@ -158,7 +189,9 @@ public class PatientRegistration {
 				+ ", patientAddress=" + patientAddress + ", dob=" + dob + ", gender=" + gender + ", bloodGroup="
 				+ bloodGroup + ", mobileNumber=" + mobileNumber + ", relativeName=" + relativeName
 				+ ", relativeMobileNumber=" + relativeMobileNumber + ", relationWithPatient=" + relationWithPatient
-				+ "]";
+				+ ", roleId=" + roleId + "]";
 	}
+
+	
 
 }

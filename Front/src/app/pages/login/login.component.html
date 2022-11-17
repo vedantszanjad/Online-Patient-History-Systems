@@ -1,36 +1,3 @@
-<!-- <div class = "bootstrap-wrapper">
-    <div class ="container">
-        <div class ="row">
-            <div class = "col-md-6 offset-md-3">
-              <div class = "container text-center">
-                <img src = "../../../assets/Login Logo.jfif" alt="loading..." width="100" height="100"/>
-              </div>
-              <h1 class = "text-center">Login Here</h1>
-              <mat-card>
-                <form #loginform = "ngForm" (ngSubmit)="loginUser()" action="">
-                    Email 
-                        <mat-form-field  class = "full-width"appearance="outline">
-                            <mat-label>EmailId</mat-label>
-                            <input required matInput placeholder="Email*">
-                            <mat-hint>Enter valid EmailId</mat-hint>
-                          </mat-form-field>
-                    Password 
-                          <mat-form-field  class = "full-width"appearance="outline">
-                            <mat-label>Password</mat-label>
-                            <input required type="password" matInput placeholder="Password*"/>
-                            <mat-hint>Password must be unique</mat-hint>
-                          </mat-form-field>
-                          
-                            <button type ="submit" color="primary">Login</button>
-                            <button style = "margin-left: 20px;" mat-raised-button color="primary">Reset</button>
-                        
-                          <a href="/registration">New User Register</a>
-                        </form>
-                      </mat-card>
-                      </div>
-        </div>
-    </div>
-</div> -->
 
 <html>
     <head>
@@ -41,7 +8,7 @@
       <div class ="text-center">
         <div class="loginbox">
           <img src="../../../assets/Login Logo.jfif" width="100px" height="100px" class="user">
-          <h1 class="text-center">Login Here</h1>
+          <h1 class="text-center">User Login</h1>
           <!-- <div class="container">
             <h2>Login</h2> -->
             <form  #loginform="ngForm" (ngSubmit)="loginUser()">
@@ -53,7 +20,10 @@
               <br>
               <br>
               <input  [disabled]="loginform.form.invalid"   type="submit" name="" value="Login"> &nbsp;
-              <input  type="reset" value="Reset">
+              <input  type="reset" value="Reset"> &nbsp;
+               <!-- <a href="adminLogin">Admin Login</a> -->
+              <!-- <input routerLink="adminLogin" type="button" name="AdminLogin" value="AdminLogin"> -->
+              <br>
             </form>
           </div>
         </div>

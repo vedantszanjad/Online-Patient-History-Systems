@@ -1,0 +1,32 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width: 10%"> PMH Id</th>
+            <th style="width: 20%"> Dose</th>
+            <th style="width: 30%">patient first name</th>
+            <th style="width: 30%">patient last name</th>
+            <th style="width: 20%">tabletId</th>
+            <th style="width: 20%">tabletPrice</th>
+            <th style="width: 20%">tabletQuantity</th>
+            <th style="width: 20%">price</th>
+        
+            <!-- <th><button [routerLink]="'/addHospital'" routerLinkActive="active" type = "submit" mat-raised-button color="warn">Add</button></th> -->
+         </tr>
+     </thead>
+    <tbody>
+         <tr *ngFor="let pd of pd">
+            <td>{{pd.pmhId}}</td>
+            <td>{{pd.dose}}</td>
+            <td>{{pd.patientRegistration.patientFirstName}}</td>
+            <td>{{pd.patientRegistration.patientLastName}}</td>
+            <td>{{pd.medicine.tabletId}}</td>
+            <td>{{pd.medicine.tabletPrice}}</td>
+            <td>{{pd.medicine.tabletQuantity}}</td>
+            <td>{{pd.medicine.price}}</td>
+            <!-- <td><button  routerLink="/editHospital/{{hospital.hospitalId}}" routerLinkActive="Active" class="text-center" type = "button" mat-raised-button color="warn">Edit</button></td>
+            <td><button (click)="delete(hospital.hospitalId)" class="text-center" type = "submit" mat-raised-button color="warn">Delete</button></td> -->
+        </tr> 
+    </tbody>
+</table>
+<div class = "text-center">
+</div> 

@@ -1,6 +1,8 @@
 package com.yash.ophs.controller;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,6 +13,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.yash.ophs.model.Medicine;
 import com.yash.ophs.model.PatientRegistration;
 import com.yash.ophs.service.PateintService;
 
@@ -22,6 +26,13 @@ public class PatientController {
 	@Autowired
 	private PateintService pateintService;
 
+	
+	
+	@GetMapping("/getOneUser/{roleId}")
+	public Optional<PatientRegistration> getUserById(@PathVariable String roleId) {
+
+		return pateintService.findUserById(Integer.parseInt(roleId));
+	}
 	
 	@PostMapping(value = "/addPatient")
     public PatientRegistration registerUser(@RequestBody PatientRegistration register) throws Exception {
@@ -45,7 +56,9 @@ public class PatientController {
 
        if (tempEmailId != null && tempPassword != null) {
             userObj = pateintService.fetchUserByEmailIdAndPassword(tempEmailId, tempPassword);
-        }
+       System.out.println("pid :: "+userObj.getPatientId()); 
+       
+       }
         if (userObj == null) {
             throw new Exception("Bad Credentials");
         }

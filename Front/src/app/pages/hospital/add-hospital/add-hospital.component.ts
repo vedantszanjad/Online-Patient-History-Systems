@@ -64,7 +64,7 @@ export class AddHospitalComponent implements OnInit {
           }
         )
 
-        this.router.navigate(['../'],{relativeTo: this.route});
+        // this.router.navigate(['../'],{relativeTo: this.route});
     }
     else {
 
@@ -84,7 +84,7 @@ export class AddHospitalComponent implements OnInit {
           }
         )
 
-     this.router.navigate(['../'],{relativeTo: this.route});
+    //  this.router.navigate(['../'],{relativeTo: this.route});
     }
 
   }

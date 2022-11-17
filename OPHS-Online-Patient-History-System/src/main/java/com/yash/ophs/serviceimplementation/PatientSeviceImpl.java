@@ -58,6 +58,7 @@ public class PatientSeviceImpl implements PateintService {
 			dr.setRelationWithPatient(pr.getRelationWithPatient());
 			dr.setRelativeMobileNumber(pr.getRelativeMobileNumber());
 			dr.setRelativeName(pr.getRelativeName());
+			dr.setRoleId(pr.getRoleId());
 
 			patientDao.save(dr);
 			System.out.println("product updated successfully");
@@ -84,4 +85,10 @@ public class PatientSeviceImpl implements PateintService {
 	        
 	        return patientDao.findByEmailIdAndPassword(emailId,password);
 	    }
+
+	@Override
+	public Optional<PatientRegistration> findUserById(int roleId) {
+		// TODO Auto-generated method stub
+		return patientDao.findById(roleId);
+	}
 	}

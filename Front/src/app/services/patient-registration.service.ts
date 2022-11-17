@@ -23,5 +23,16 @@ export class PatientRegistrationService {
   {
     return this.http.delete<any>(`${baseUrl}/patient/deletePatient/`+`${patientId}`);
   }
+
+  public findUserById(patientId: number): Observable<PatientRegistration> {
+    return this.http.get<PatientRegistration>(`${baseUrl}/patient/getOneUser/` + `${patientId}`);
+  }
+
+  public updateUser(user:any):Observable<PatientRegistration>
+  {
+    console.log('calling hospital service',user)
+    return this.http.put<PatientRegistration>(`${baseUrl}/patient/updatePatient/`+ user.patientId,user);
+  } 
+
   
 }

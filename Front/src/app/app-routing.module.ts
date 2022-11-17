@@ -19,7 +19,17 @@ import { AllergyComponent } from './pages/allergy/allergy.component';
 import { AddAllergyComponent } from './pages/allergy/add-allergy/add-allergy.component';
 import { PatientRegistration } from './model/patient-registration';
 import { RegisterComponent } from './pages/register/register.component';
-import { AdminComponent } from './pages/admin/admin.component';
+import { PatientDiseasehistoryComponent } from './pages/patient-diseasehistory/patient-diseasehistory.component';
+import { PatientmedicnehitoryComponent } from './pages/patientmedicnehitory/patientmedicnehitory.component';
+import { PatienthospitalService } from './services/patienthospital.service';
+import { PatientallergyhistoryComponent } from './pages/patientallergyhistory/patientallergyhistory.component';
+import { PatienthospitalhistoryComponent } from './pages/patienthospitalhistory/patienthospitalhistory.component';
+import { PatienthistoryComponent } from './pages/patienthistory/patienthistory.component';
+import { PatientDoctorComponent } from './pages/patient-doctor/patient-doctor.component';
+import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
+import { EditUserComponent } from './pages/user-dashboard/edit-user/edit-user.component';
+import { UserstatusComponent } from './pages/user-dashboard/userstatus/userstatus.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 const routes: Routes =
   [
@@ -112,15 +122,41 @@ const routes: Routes =
       path: 'addAllergy', component: AddAllergyComponent
     },
     {
+      path:'editAllergy/:id',component:AddAllergyComponent
+    },
+    {
       path: 'getPatientList', component: SignupComponent
     },
     {
       path:'addPatient',component : RegisterComponent
     },
     {
-      path:'getAdmin',component:AdminComponent
+      path:'getPdHistory',component:PatientDiseasehistoryComponent
+    },
+    {
+      path:'getPmHistory',component:PatientmedicnehitoryComponent
+    },
+    {
+      path:'getPhHistory',component:PatienthospitalhistoryComponent
+    },
+    {
+      path:'getpaHistory',component:PatientallergyhistoryComponent
+    },
+    {
+      path:'getAllPatientHistory',component:PatienthistoryComponent
+    },
+    {
+      path:'getAllPatientDoctorVisit',component:PatientDoctorComponent
+    },
+    {
+      path:'user',component:UserDashboardComponent
+    },
+    {
+      path:"editUser/:id",component:EditUserComponent
+    },
+    {
+      path:'userStatus',component:UserstatusComponent
     }
-
   ];
 
 @NgModule({

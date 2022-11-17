@@ -11,12 +11,12 @@ import { DoctorService } from 'src/app/services/doctor.service';
 export class DiseaseComponent implements OnInit {
 
   diseases: Disease[];
-  constructor(private DiseaseTsService : DiseaseTsService,
-    private location: Location) { }
+  constructor(private DiseaseTsService : DiseaseTsService
+   ) { }
 
 
   ngOnInit(): void {
-
+    console.log('ok')
     this.DiseaseTsService.getAllDiseaseList()
     .subscribe({
       next:(data) => {

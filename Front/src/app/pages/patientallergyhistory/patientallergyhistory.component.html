@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width: 10%"> pahId Id</th>
+            <th style="width: 30%">patient first name</th>
+            <th style="width: 30%">patient last name</th>
+            <th style="width: 20%"> allergyName</th>
+            <th style="width: 20%">allergyType</th>   
+            <!-- <th><button [routerLink]="'/addHospital'" routerLinkActive="active" type = "submit" mat-raised-button color="warn">Add</button></th> -->
+         </tr>
+     </thead>
+    <tbody>
+         <tr *ngFor="let patientallergy of patientallergy">
+            <td>{{patientallergy.phhId}}</td>
+            <td>{{patientallergy.patientRegistration.patientFirstName}}</td>
+            <td>{{patientallergy.patientRegistration.patientLastName}}</td>
+            <td>{{patientallergy.allergy.allergyName}}</td>
+            <td>{{patientallergy.allergy.allergyType}}</td>
+            <!-- <td><button  routerLink="/editHospital/{{hospital.hospitalId}}" routerLinkActive="Active" class="text-center" type = "button" mat-raised-button color="warn">Edit</button></td>
+            <td><button (click)="delete(hospital.hospitalId)" class="text-center" type = "submit" mat-raised-button color="warn">Delete</button></td> -->
+        </tr> 
+    </tbody>
+</table>
+<div class = "text-center">
+</div> 

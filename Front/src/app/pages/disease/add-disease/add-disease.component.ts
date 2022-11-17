@@ -45,6 +45,7 @@ export class AddDiseaseComponent implements OnInit {
         );
     }
   }
+  
   formSubmit() {
 
     if (this.disease.diseaseId === '') {
@@ -83,7 +84,7 @@ export class AddDiseaseComponent implements OnInit {
           }
         )
 
-       this.router.navigate(['../'],{relativeTo: this.route});
+       //this.router.navigate(['../'],{relativeTo: this.route});
     }
 
   }

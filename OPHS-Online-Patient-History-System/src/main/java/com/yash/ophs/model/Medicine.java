@@ -5,13 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "Medicine")
 public class Medicine {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "tab_id")
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int tabletId;
 	
 	@Column(name = "tab_name")
