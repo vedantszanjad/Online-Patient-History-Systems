@@ -1,4 +1,3 @@
-<p>register works!</p>
 <div class="bootstrap-wrapper">
     <div class="container">
         <div class="row">
@@ -8,8 +7,7 @@
 
                 </div>
                 <h1 class="text-center">Registered Here</h1>
-                <!-- //{{patient | json}} -->
-                <mat-card>
+                <mat-card class="text-center" >
                     <form (ngSubmit)="formSubmit() ">
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>EmailId</mat-label>
@@ -87,7 +85,6 @@
                         <br>
                         <div class="container text-center">
                             <button type="submit" mat-raised-button color="warn">Registered</button>
-                            <br><br>
                             <input class="but"  type="reset" value="Reset">
                         </div>
                     </form>

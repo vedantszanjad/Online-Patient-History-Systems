@@ -1,3 +1,4 @@
+<h1 class = "text-center">Patient Allergy Details</h1>
 <table class="table">
     <thead>
         <tr>
@@ -11,7 +12,7 @@
      </thead>
     <tbody>
          <tr *ngFor="let patientallergy of patientallergy">
-            <td>{{patientallergy.phhId}}</td>
+            <td>{{patientallergy.pahId}}</td>
             <td>{{patientallergy.patientRegistration.patientFirstName}}</td>
             <td>{{patientallergy.patientRegistration.patientLastName}}</td>
             <td>{{patientallergy.allergy.allergyName}}</td>

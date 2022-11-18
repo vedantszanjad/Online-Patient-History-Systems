@@ -1,4 +1,4 @@
-<br>
+<!-- <br>
 <br>
 <button routerLink="/editUser/{{register.patientId}}" 
 class="text-center" type="button" mat-raised-button
@@ -7,4 +7,70 @@ class="text-center" type="button" mat-raised-button
     <br>
     <button routerLink="/userStatus" 
 class="text-center" type="button" mat-raised-button
-    color="warn">View My Status</button>
+    color="warn">View My Status</button> -->
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+         
+        </div>
+    </div>
+	<div class="profile">
+             
+            </div>
+         <div>   
+			<ul>
+                <li>
+                    <button mat-raised-button mat-raised-button color="warn" >Welcome {{register.patientFirstName}}</button>
+                </li>
+                <br>
+                <li>
+                    <a href="/editUser/{{register.patientId}}" class="active"> 
+                        <button type = "submit" mat-raised-button color="primary" > My Profile</button>
+                    </a> 
+                </li>
+                <br>
+                <li>
+                    <button routerLink="/userStatus"  mat-raised-button color="primary">My Status</button>
+                </li>
+                <br>
+               
+            </ul>
+        </div>
+       
+		<div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+  <script>
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
